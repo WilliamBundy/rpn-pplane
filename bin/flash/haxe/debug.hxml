@@ -1,0 +1,12 @@
+-main ApplicationMain 
+-lib openfl
+-cp src
+-D tools=1.2.9
+-D web
+-swf-version 11.2
+-swf bin/flash/bin/rpn-pplane.swf
+-swf-header 1280:900:60:EFEFEF
+-cp bin/flash/haxe
+#--remap nme:flash
+--no-inline
+-debug
