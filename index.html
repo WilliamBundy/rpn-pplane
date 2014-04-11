@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>rpn-pplane by WilliamBundy</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>rpn-pplane</h1>
+        <p>haXe PPlane/Dfield implementation using reverse-polish-notation</p>
+
+        <p class="view"><a href="https://github.com/WilliamBundy/rpn-pplane">View the Project on GitHub <small>WilliamBundy/rpn-pplane</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/WilliamBundy/rpn-pplane/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/WilliamBundy/rpn-pplane/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/WilliamBundy/rpn-pplane">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="rpn-pplane" class="anchor" href="#rpn-pplane"><span class="octicon octicon-link"></span></a>rpn-pplane</h1>
+
+<p>Written for an ODE class, this is a simple replacement for the java versions found here: <a href="http://math.rice.edu/%7Edfield/dfpp.html">http://math.rice.edu/~dfield/dfpp.html</a></p>
+
+<h2>
+<a name="equation-format" class="anchor" href="#equation-format"><span class="octicon octicon-link"></span></a>Equation format</h2>
+
+<p>Equations are given in reverse polish notation, meaning that the operator comes after the operands.</p>
+
+<p>For example:
+<code>x + 1</code> becomes <code>x 1 +</code></p>
+
+<h3>
+<a name="constants" class="anchor" href="#constants"><span class="octicon octicon-link"></span></a>Constants</h3>
+
+<p>Terms that don't match any defined functions or variables are treated as constants and parsed by haXe's <code>Std.parseFloat</code> function. All positive and negative real numbers work, anything else gets treated as not-a-number (<code>NaN</code>).</p>
+
+<h3>
+<a name="variables" class="anchor" href="#variables"><span class="octicon octicon-link"></span></a>Variables</h3>
+
+<p>The only defined variables are <code>x</code> and <code>y</code>. Constructs such as <code>2x</code> are not allowed, use <code>2 x *</code>. </p>
+
+<h3>
+<a name="defined-functions" class="anchor" href="#defined-functions"><span class="octicon octicon-link"></span></a>Defined Functions:</h3>
+
+<ul>
+<li>Addition: <code>+</code>
+</li>
+<li>Subtraction: <code>-</code>
+</li>
+<li>Multiplication: <code>*</code>
+</li>
+<li>Division: <code>/</code>
+</li>
+<li><p>Powers: <code>^</code></p></li>
+<li><p>Square Root: <code>sqrt</code></p></li>
+<li>Sine: <code>sin</code>
+</li>
+<li>Cosine: <code>cos</code>
+</li>
+<li>Tangent: <code>tan</code>
+</li>
+<li>Natural Logarithm: <code>log</code>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/WilliamBundy">WilliamBundy</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
